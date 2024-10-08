@@ -1,0 +1,510 @@
+body > *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 50px;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+header>h1{
+    color: #D04F4F;
+    font-family: DM Sans;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+header>i{
+    position: absolute;
+    right: 70px;
+    left: auto;
+    font-size: 30px;
+    top:165px
+}
+
+header>input{
+    border: none;
+    border-radius: 10px;
+    padding: 25px;
+    height: 70px;
+    width: 100%;
+    background: #E7E7E7;
+    font-family: lato;
+    font-size: 18px;
+    font-weight: 400;
+    outline: none;
+}
+
+header>input::placeholder{
+    color: hwb(0 0% 100% / 0.250);
+}
+
+/*****         NAV         *****/
+#filters-zone{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+#filters-zone-ingredients{
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    width: min-content;
+}
+#filters-zone-appliances{
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    width: min-content;
+}
+#filters-zone-ustensiles{
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    width: min-content;
+}
+
+.ingredientFilter{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 37px;
+    width: 150px;
+    border-radius: 5px;
+    background: #3282F7;
+    color: white;
+}
+.appliancesFilter{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 37px;
+    width: 150px;
+    border-radius: 5px;
+    background: #68D9A4;
+    color: white;
+}
+.ustensilFilter{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 37px;
+    width: 150px;
+    border-radius: 5px;
+    background: #ED6454;
+    color: white;
+}
+
+nav{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+}
+
+
+/*****         NAV         *****/
+/*****         INGREDIENTS           *****/
+
+#ingredients-dropdown{
+    z-index: 2;
+    height: min-content;
+    background: #3282F7;
+    border-radius: 5px;
+}
+#ingredients-toggle{
+    height: 69px;
+    width: 170px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#ingredients-toggle-button{
+    border: none;
+    background: #3282F7;
+    color: white;
+    font-family: lato;
+    font-size: 18px;
+    font-weight: 400;
+}
+#ingredients-toggle-chevron-down{
+    color: white;
+    margin-right: 10px;
+}
+#ingredients-toggle-chevron-up{
+    color: white;
+    margin-right: 10px;
+}
+#ingredients-dropdown-content{
+    display: none;
+    background: #3282F7;
+    border-radius: 5px;
+}
+#ingredients-toggle-open{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+#ingredients-dropdown-input{
+    color: white;
+    font-family: lato;
+    font-size: 18px;
+    font-weight: 400;
+    height: 69px;
+    border: none;
+    background: #3282F7;
+    border-radius: 5px;
+    margin-left: 20px;
+    width: 90%;
+}
+#ingredients-dropdown-input::placeholder{
+    color: hwb(0 100% 0% / 0.750);
+    font-family: lato;
+    font-size: 18px;
+    font-weight: 700;
+}
+#ingredients-dropdown-input:focus{
+    outline: none;
+}
+#ingredients-dropdown-container{
+    background: #3282F7;
+    border-radius: 5px;
+}
+#ingredients-dropdown-datalist{
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: #3282F7;
+    color: white;
+    list-style: none;
+    border-radius: 5px;
+}
+.ingredients-dropdown-datalist-option{
+    padding: 10px 20px;
+    font-family: lato;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 5px;
+}
+.appliances-dropdown-datalist-option:hover{
+    border: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+/*****         INGREDIENTS           *****/
+/*****         APPLIANCES           *****/
+
+#appliances-dropdown{
+    z-index: 2;
+    height: min-content;
+    background: #68D9A4;
+    border-radius: 5px;
+}
+#appliances-toggle{
+    height: 69px;
+    width: 170px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#appliances-toggle-button{
+    border: none;
+    background: #68D9A4;
+    color: white;
+    font-family: lato;
+    font-size: 18px;
+    font-weight: 400;
+}
+#appliances-toggle-chevron-down{
+    color: white;
+    margin-right: 10px;
+}
+#appliances-toggle-chevron-up{
+    color: white;
+    margin-right: 10px;
+}
+#appliances-dropdown-content{
+    display: none;
+    background: #68D9A4;
+    border-radius: 5px;
+}
+#appliances-toggle-open{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+#appliances-dropdown-input{
+    color: white;
+    font-family: lato;
+    font-size: 18px;
+    font-weight: 400;
+    height: 69px;
+    border: none;
+    background: #68D9A4;
+    border-radius: 5px;
+    margin-left: 20px;
+    width: 90%;
+}
+#appliances-dropdown-input::placeholder{
+    color: hwb(0 100% 0% / 0.750);
+    font-family: lato;
+    font-size: 18px;
+    font-weight: 700;
+}
+#appliances-dropdown-input:focus{
+    outline: none;
+}
+#appliances-dropdown-container{
+    background: #68D9A4;
+    border-radius: 5px;
+}
+#appliances-dropdown-datalist{
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: #68D9A4;
+    color: white;
+    list-style: none;
+    border-radius: 5px;
+}
+.appliances-dropdown-datalist-option{
+    padding: 10px 20px;
+    font-family: lato;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 5px;
+}
+.appliances-dropdown-datalist-option:hover{
+    border: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+/*****         APPLIANCES           *****/
+/*****         USTENSILS           *****/
+
+#ustensils-dropdown{
+    z-index: 2;
+    height: min-content;
+    background: #ED6454;
+    border-radius: 5px;
+}
+#ustensils-toggle{
+    height: 69px;
+    width: 170px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#ustensils-toggle-button{
+    border: none;
+    background: #ED6454;
+    color: white;
+    font-family: lato;
+    font-size: 18px;
+    font-weight: 400;
+}
+#ustensils-toggle-chevron-down{
+    color: white;
+    margin-right: 10px;
+}
+#ustensils-toggle-chevron-up{
+    color: white;
+    margin-right: 10px;
+}
+#ustensils-dropdown-content{
+    display: none;
+    background: #ED6454;
+    border-radius: 5px;
+}
+#ustensils-toggle-open{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+#ustensils-dropdown-input{
+    color: white;
+    font-family: lato;
+    font-size: 18px;
+    font-weight: 400;
+    height: 69px;
+    border: none;
+    background: #ED6454;
+    border-radius: 5px;
+    margin-left: 20px;
+    width: 90%;
+}
+#ustensils-dropdown-input::placeholder{
+    color: hwb(0 100% 0% / 0.750);
+    font-family: lato;
+    font-size: 18px;
+    font-weight: 700;
+}
+#ustensils-dropdown-input:focus{
+    outline: none;
+}
+#ustensils-dropdown-container{
+    background: #ED6454;
+    border-radius: 5px;
+}
+#ustensils-dropdown-datalist{
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: #ED6454;
+    color: white;
+    list-style: none;
+    border-radius: 5px;
+}
+.ustensils-dropdown-datalist-option{
+    padding: 10px 20px;
+    font-family: lato;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 5px;
+}
+.ustensils-dropdown-datalist-option:hover{
+    border: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+/*****         USTENSILS           *****/
+/*****         RECIPES           *****/
+
+#recipes-section{
+    position: absolute;
+    z-index: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 50px;
+}
+
+.recipe-card{
+    margin: 1%;
+    width: 30%;
+    margin-bottom: 3%;
+}
+
+.recipe-image{
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    background: #C7BEBE;
+    border-radius: 15px 15px 0 0;
+}
+
+.recipe-content{
+    display: flex;
+    height: 200px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background: #E7E7E7;
+    border-radius: 0 0 15px 15px ;
+    margin-top: -5px;
+    padding: 18px;
+}
+
+
+.recipe-content>h2{
+    margin-top: 0px;
+    width: 65%;
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    margin-right: 5%;
+}  
+
+.recipe-content>.times{
+    margin-top: 0px;
+    width: 30%;
+    display: flex;
+    flex-direction: row-reverse;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: left;
+     
+}
+.fa-clock{
+    margin-right: 3px;
+    margin-top: 5px; 
+}
+
+.recipe-content > ul {
+    margin: 0;
+    padding: 0;
+    width: 30%;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px; /* Ajustez la valeur selon vos besoins */
+    text-align: left;
+    list-style-type: none;
+    position: relative;
+    overflow: hidden;
+    flex-wrap: wrap; /* Ajoutez cette ligne */
+}  
+
+.recipe-content > .recipe-description {
+    height: 109px;
+    width: 65%;
+    margin-left: 5%;
+    font-family: lato;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .recipe-description>p{
+      margin: 0px;
+      line-height: 16px; /* Augmentez la valeur pour éviter le chevauchement de texte */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 5; /* Définissez le nombre de lignes à afficher */
+      -webkit-box-orient: vertical;
+      white-space: normal;
+    }
+    
+    
+@media (min-width: 1025px) { 
+    .recipe-image{
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        background: #C7BEBE;
+        border-radius: 15px 15px 0 0;
+    }
+    
+    .recipe-content{
+        display: flex;
+        height: 180px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        background: #E7E7E7;
+        border-radius: 0 0 15px 15px ;
+        margin-top: -5px;
+        padding: 18px;
+    }    
+}
